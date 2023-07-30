@@ -8,3 +8,21 @@ I'm pretty sure this won't compile or work in the Arduino env. But if it does it
 The goal of this version is to allow me to have LEDs that can be on/off/fflash/sflash/ffade/sfade and buzz. I'll also try to add commands that can change the way the slow and fast flash and fade work. All of this without using interrupts.
 
 This is code I'm working on in my spare time so I it's very confusing right now. There are extra functions that I don't need and some other junk. It should compile unter Linux with ```gcc -Wall -O3 ledtower.c; echo $?``` but the a.out will problaby not give you useful information yet. Right now I'm testing ideas that will allow me to track the 4 LEDs and the buzzer. This is not the way I code at work but it is the way I code when I get a spare 5 minutes.
+
+# Hardware
+
+https://tasmota.github.io/docs/devices/H801/#hardware
+
+The chip used on this board is the ESP8266EX. 5 PWM outputs are connected to DTU35N06 MOSFETs to drive the 5 output channels (RGB + W1 + W2).
+
+|----------------+---------+---------|
+| Function       | ESP Pin | Channel |
+|----------------+---------+---------|
+| R              | GPIO 15 | PWM1    |
+| G              | GPIO 13 | PWM2    |
+| B              | GPIO 12 | PWM3    |
+| W1             | GPIO 14 | PWM4    |
+| W2             | GPIO 04 | PWM5    |
+| LED D1(red)    | GPIO 05 |         |
+| LED D2 (green) | GPIO 01 |         |
+|----------------+---------+---------|
