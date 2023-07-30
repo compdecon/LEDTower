@@ -19,7 +19,7 @@ LED list[] = {
     { "yellow", 1, &off, 0, 0, 0 },
     { "green",  1, &off, 0, 0, 0 },
     { "blue",   1, &off, 0, 0, 0 },
-    { "piozo",  1, &off, 0, 0, 0 }
+    { "piezo",  1, &off, 0, 0, 0 }
 };
 
 /*
