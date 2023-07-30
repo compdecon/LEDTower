@@ -18,5 +18,13 @@ extern void sflashLo(LED *led);
 extern void fflashHi(LED *led);
 extern void fflashLo(LED *led);
 
+extern void sfade(LED *led);
+extern void ffade(LED *led);
+
+extern void sflash(LED *led);
+extern void fflash(LED *led);
+
+extern void analogWrite(int pin, int value);
+
 #define FUNCTIONS_H
 #endif
